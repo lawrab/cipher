@@ -122,12 +122,21 @@ The briefing is designed to be self-contained — the AI doesn't need any other 
 
 ### Claude Code `/wow` skill
 
-If you use [Claude Code](https://claude.ai/code), a pre-built skill is included at `.claude/commands/wow.md`. After copying it to your user commands directory (`~/.claude/commands/`), type:
+If you use [Claude Code](https://claude.ai/code), a pre-built `/wow` skill is included at `.claude/commands/wow.md`. It works best when Claude Code is opened with the `cipher/` directory as the working directory, so relative paths resolve correctly.
+
+To install it as a user-level command available everywhere, copy it to your Claude commands directory:
+
+```bash
+cp .claude/commands/wow.md ~/.claude/commands/wow.md
+```
+
+Then open Claude Code from inside the cipher directory and type:
 
 ```
 /wow morphinos gear
 /wow angryarchie gold
 /wow <charname> professions
+/wow <charname> spec
 ```
 
 Claude will read the relevant briefing automatically and answer as a TBC Anniversary expert.
@@ -136,6 +145,10 @@ Claude will read the relevant briefing automatically and answer as a TBC Anniver
 
 ```
 cipher/
+├── .claude/
+│   ├── agents/             Claude Code dev agent for working on Cipher itself
+│   └── commands/
+│       └── wow.md          /wow skill — AI gear/gold advisor for your characters
 ├── addon/                  WoW addon
 │   ├── Cipher.lua          Main addon logic
 │   └── Cipher.toc          Addon manifest

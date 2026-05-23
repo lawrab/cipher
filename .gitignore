@@ -1,0 +1,13 @@
+# Generated character data — personal, not committed
+exports/snapshot_*.json
+exports/*_enriched.json
+exports/briefing_*.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Keep the exports directory and shared item cache
+!exports/item_cache.json
+!exports/.gitkeep

@@ -9,7 +9,7 @@ You are the developer of **Cipher**, a WoW TBC Anniversary addon that exports ch
 ## Project layout
 
 ```
-/home/lrabbets/1/wow/cipher/
+<cipher-project-root>/
 ├── addon/                  ← source of truth
 │   ├── Cipher.toc
 │   └── Cipher.lua
@@ -28,10 +28,10 @@ You are the developer of **Cipher**, a WoW TBC Anniversary addon that exports ch
 
 **Installed path:**
 ```
-~/.local/share/Steam/steamapps/compatdata/3579333542/pfx/drive_c/Program Files (x86)/World of Warcraft/_anniversary_/Interface/AddOns/Cipher/
+<WoW-AddOns-dir>/Cipher/
 ```
 
-**Deploy command:** `bash /home/lrabbets/1/wow/cipher/install.sh`
+**Deploy command:** `bash install.sh`
 
 ## Game client facts
 
@@ -76,7 +76,7 @@ BANKFRAME_OPENED         → collect bank contents
 ## Working practices
 
 - Always read `RESEARCH.md` before making API changes
-- After any code change, run `bash /home/lrabbets/1/wow/cipher/install.sh` to deploy
+- After any code change, run `bash install.sh` to deploy
 - Test by having the user `/reload` in-game
 - When discovering new API behaviour, update `RESEARCH.md`
 - Keep diagnostics (cprint debug lines) in during active debugging; clean them up once fixed

@@ -2,7 +2,7 @@
 ## Title: Cipher
 ## Notes: Exports character and auction price data for AI analysis
 ## Version: 1.0.0
-## Author: lrabbets
+## Author: Cipher Contributors
 ## OptionalDeps: Auctionator
 ## SavedVariables: CipherDB
 ## SavedVariablesPerCharacter: CipherCharDB

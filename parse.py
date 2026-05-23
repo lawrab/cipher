@@ -16,8 +16,8 @@ from pathlib import Path
 # Paths
 # ============================================================
 
-WOW_BASE = Path.home() / ".local/share/Steam/steamapps/compatdata/3579333542/pfx/drive_c/Program Files (x86)/World of Warcraft/_anniversary_"
-WTF_ACCOUNT = WOW_BASE / "WTF/Account/LRABBETS"
+WOW_BASE = Path.home() / ".local/share/Steam/steamapps/compatdata/YOUR_APP_ID/pfx/drive_c/Program Files (x86)/World of Warcraft/_anniversary_"
+WTF_ACCOUNT = WOW_BASE / "WTF/Account/YOUR_ACCOUNT_NAME"
 ACCOUNT_SV  = WTF_ACCOUNT / "SavedVariables/Cipher.lua"
 EXPORTS_DIR = Path(__file__).parent / "exports"
 

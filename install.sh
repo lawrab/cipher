@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Copies the Cipher addon to the WoW TBC Anniversary AddOns directory.
 
-ADDONS_DIR="/home/lrabbets/.local/share/Steam/steamapps/compatdata/3579333542/pfx/drive_c/Program Files (x86)/World of Warcraft/_anniversary_/Interface/AddOns"
+# Edit this path to point to your WoW TBC Anniversary AddOns directory
+ADDONS_DIR="/path/to/World of Warcraft/_anniversary_/Interface/AddOns"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SRC="$SCRIPT_DIR/addon"

@@ -2,6 +2,8 @@
 
 WoW TBC Anniversary addon + Python pipeline that exports character gear, inventory, talent specs, professions, and auction prices into compact per-character briefings you can feed to an AI assistant for gear advice.
 
+> **Platform support:** Developed and tested on **Linux** (Steam/Proton). Windows support is planned for a future update — path handling and the install script will need adjustments to work on Windows natively.
+
 ## How it works
 
 ```
@@ -94,30 +96,12 @@ python3 summarize.py                      # regenerate briefings from enriched s
 
 ## Output
 
-`exports/briefing_<charname>.md` — a compact character snapshot:
+`exports/briefing_<charname>.md` — a compact character snapshot (~200 lines). See real examples in [`examples/`](examples/):
 
-```markdown
-# Morphinos — Priest (Human) — Level 70
+- [`examples/briefing_angryarchie.md`](examples/briefing_angryarchie.md) — Level 70 Warrior (Arms/Fury DPS + Prot offspec)
+- [`examples/briefing_morphinos.md`](examples/briefing_morphinos.md) — Level 70 Priest (Holy healer)
 
-**Realm:** Thunderstrike (Alliance)
-**Exported:** 2026-05-23 07:22 UTC
-
-## Specs
-- Spec 1: 14/0/47 (Discipline / Shadow)
-- Spec 2 (active): 20/41/0 (Discipline / Holy)
-
-## Gear
-[Head] ✦✦✦ Light-Collar of the Incarnate (iLvl 120) | Enchant #3001
-  Stats: +28 Stamina, +34 Intellect, +25 Spirit, +72 Healing, +5 MP5
-...
-
-## Inventory
-### Top items by value
-- Large Prismatic Shard x17 [bank] — 324g 30s (19g 07s/TSM each)
-...
-```
-
-Quality markers: ✦ = Uncommon, ✦✦ = Rare, ✦✦✦ = Epic, ★ = Legendary
+Quality markers in briefings: ✦ = Uncommon, ✦✦ = Rare, ✦✦✦ = Epic, ★ = Legendary
 
 ## Price data
 
@@ -155,6 +139,9 @@ cipher/
 ├── addon/                  WoW addon
 │   ├── Cipher.lua          Main addon logic
 │   └── Cipher.toc          Addon manifest
+├── examples/               Real example briefings
+│   ├── briefing_angryarchie.md
+│   └── briefing_morphinos.md
 ├── exports/                Generated output (gitignored except item_cache.json)
 │   └── item_cache.json     Shared Wowhead item stat cache
 ├── parse.py                SavedVariables → JSON snapshots
